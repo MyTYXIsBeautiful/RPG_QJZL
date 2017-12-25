@@ -56,3 +56,10 @@ public class ConstHeroData
     public const string physicalVampire = "physicalVampire";
     public const string magicVampire = "magicVampire";
 }
+public class ConstScript
+{
+    public const string PlayerSelect = "PlayerSelect";
+    public const string Login = "Login_Interface";
+    public const string loadingScene = "loadingScene";
+    public const string GameMainScene = "GameMainScene";
+}

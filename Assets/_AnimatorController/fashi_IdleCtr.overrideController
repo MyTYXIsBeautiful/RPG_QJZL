@@ -1,0 +1,12 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!221 &22100000
+AnimatorOverrideController:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_Name: fashi_IdleCtr
+  m_Controller: {fileID: 9100000, guid: f4b6e8c363d4a5244abd9633a4a0f40e, type: 2}
+  m_Clips:
+  - m_OriginalClip: {fileID: 7400000, guid: e2397b9f62fb02744a91f663fbb9f0cf, type: 3}
+    m_OverrideClip: {fileID: 7400000, guid: 62fe5068ac2aced4c822f8b42d1ff86c, type: 3}

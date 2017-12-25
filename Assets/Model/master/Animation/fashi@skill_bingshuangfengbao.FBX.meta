@@ -2,7 +2,7 @@ fileFormatVersion: 2
 guid: 23e3d5d01edb2b14faed569108a17b62
 timeCreated: 18446744011573954816
 ModelImporter:
-  serializedVersion: 22
+  serializedVersion: 21
   fileIDToRecycleName:
     100000: Bip01
     100002: Bip01 Head
@@ -137,12 +137,10 @@ ModelImporter:
     7400004: skill_bingshuangfengbao_03
     7400006: skill_bingshuangfengbao_04
     9500000: //RootNode
-  externalObjects: {}
   materials:
     importMaterials: 1
     materialName: 0
     materialSearch: 1
-    materialLocation: 0
   animations:
     legacyGenerateAnimations: 4
     bakeSimulation: 0
@@ -155,7 +153,6 @@ ModelImporter:
     animationImportWarnings: 
     animationRetargetingWarnings: 
     animationDoRetargetingWarnings: 0
-    importAnimatedCustomProperties: 0
     animationCompression: 3
     animationRotationError: 0.5
     animationPositionError: 0.5
@@ -168,7 +165,7 @@ ModelImporter:
       name: skill_bingshuangfengbao_01
       takeName: Take 001
       firstFrame: 0
-      lastFrame: 96
+      lastFrame: 10
       wrapMode: 0
       orientationOffsetY: 0
       level: 0

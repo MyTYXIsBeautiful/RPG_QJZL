@@ -1,0 +1,32 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2015
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RPG_QJZL", "RPG_QJZL.csproj", "{54E25712-4B60-923F-7A73-5C2A2AEA6BEA}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RPG_QJZL.Plugins", "RPG_QJZL.Plugins.csproj", "{D7600B6E-232A-4D18-5BCA-D1B8FDD22AD3}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RPG_QJZL.Editor.Plugins", "RPG_QJZL.Editor.Plugins.csproj", "{AA277CC6-60EA-32B2-EDB5-70D25B0F31DA}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{54E25712-4B60-923F-7A73-5C2A2AEA6BEA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{54E25712-4B60-923F-7A73-5C2A2AEA6BEA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{54E25712-4B60-923F-7A73-5C2A2AEA6BEA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{54E25712-4B60-923F-7A73-5C2A2AEA6BEA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D7600B6E-232A-4D18-5BCA-D1B8FDD22AD3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D7600B6E-232A-4D18-5BCA-D1B8FDD22AD3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D7600B6E-232A-4D18-5BCA-D1B8FDD22AD3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D7600B6E-232A-4D18-5BCA-D1B8FDD22AD3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AA277CC6-60EA-32B2-EDB5-70D25B0F31DA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AA277CC6-60EA-32B2-EDB5-70D25B0F31DA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AA277CC6-60EA-32B2-EDB5-70D25B0F31DA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AA277CC6-60EA-32B2-EDB5-70D25B0F31DA}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
