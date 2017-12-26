@@ -5,19 +5,6 @@ using UnityEngine.UI;
 
 public class GameMainUI : MonoBehaviour {
 
-    //定义委托
-    public delegate void PlayerAttributeChanges();
-    //定义委托事件
-    public event PlayerAttributeChanges change;
-     
-
-    void PlayerAttributeChange()
-    {
-        if (change != null)
-        {
-            change();
-        }
-    }
     #region 单例模式
     private static GameMainUI _instance;
     public static GameMainUI Instance
@@ -32,6 +19,21 @@ public class GameMainUI : MonoBehaviour {
         }
     }
     #endregion
+
+    //定义委托
+    public delegate void PlayerAttributeChanges();
+    //定义委托事件
+    public event PlayerAttributeChanges change;
+     
+
+    void PlayerAttributeChange()
+    {
+        if (change != null)
+        {
+            change();
+        }
+    }
+
     public Button KnapsackBtn;  //背包按钮
     public Button chestBtn;     //仓库按钮
     public Button StoreBtn;     //商店按钮
@@ -41,6 +43,7 @@ public class GameMainUI : MonoBehaviour {
     public Text MPTxt;
     public Image HPImage;
     public Image MPImage;
+    private Text coinText;
 
     #region basic property
     private int basicStrength = 10;
@@ -113,8 +116,8 @@ public class GameMainUI : MonoBehaviour {
     }
     #endregion  
 
-    private int coinAmount = 100;//金币
-    private Text coinText;
+    private int coinAmount = 100;   
+
 
     public int CoinAmount
     {
@@ -127,9 +130,9 @@ public class GameMainUI : MonoBehaviour {
             coinAmount = value;
             coinText.text = coinAmount.ToString();
         }
-    }
-    int MaxHP;
-    int MaxMP;
+    }        //金币
+    public int MaxHP { get; set; }                      //最大生命值    
+    public int MaxMP { get; set; }                     //最大MP
     private void Awake()
     {
         coinText = GameObject.Find("Coins").GetComponentInChildren<Text>();
@@ -159,6 +162,7 @@ public class GameMainUI : MonoBehaviour {
         if (Input.GetKeyDown(KeyCode.Q))
         {
             HP += 5;
+            CharacterPanel.Instance.UpdatePropertyText();
         }
     }
     /// <summary>
@@ -185,7 +189,9 @@ public class GameMainUI : MonoBehaviour {
         coinText.text = coinAmount.ToString();
     }
 
-
+    /// <summary>
+    /// HP,MP与UI关联
+    /// </summary>
     void DateChange()
     {
         if (HP <= MaxHP&&HP>=0)
@@ -197,8 +203,10 @@ public class GameMainUI : MonoBehaviour {
         {
             //如果此时HP和MP为Int类型的话,需要转换(做错笔记)
             MPTxt.text = MP.ToString() + " / " + MaxMP.ToString();
-            MPImage.fillAmount = (float)MP / MaxMP;
+            MPImage.fillAmount = (float)MP / MaxMP; 
         }
     }
+
+    
 
 }

@@ -91,21 +91,36 @@ public class Slot : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler, IP
                 }
                 if(currentItemUI.Item is Consumable)
                 {
-                    currentItemUI.ReduceAmount(1);
-                    if (currentItemUI.Amount <= 0)
+                    
+                    if (GameMainUI.Instance.HP < GameMainUI.Instance.MaxHP)
                     {
-                        DestroyImmediate(currentItemUI.gameObject);
-                        InventoryManager.Instance.HideToolTip();
+                        if (currentItemUI.Item.ID == 1)
+                        {
+                            GameMainUI.Instance.HP += ((Consumable)(currentItemUI.Item)).HP;
+                            CharacterPanel.Instance.UpdatePropertyText();
+                            currentItemUI.ReduceAmount(1);
+                        }
+                        if (currentItemUI.Amount <= 0)
+                        {
+                            DestroyImmediate(currentItemUI.gameObject);
+                            InventoryManager.Instance.HideToolTip();
+                        }
                     }
-                    if (currentItemUI.Item.ID == 1)
+                    if (GameMainUI.Instance.MP < GameMainUI.Instance.MaxMP)
                     {
-                        GameMainUI.Instance.HP += ((Consumable)(currentItemUI.Item)).HP;
-                        Debug.Log(((Consumable)(currentItemUI.Item)).HP); 
+                        if (currentItemUI.Item.ID == 2)
+                        {
+                            GameMainUI.Instance.MP += ((Consumable)(currentItemUI.Item)).MP;
+                            CharacterPanel.Instance.UpdatePropertyText();
+                            currentItemUI.ReduceAmount(1);
+                        }
+                        if (currentItemUI.Amount <= 0)
+                        {
+                            DestroyImmediate(currentItemUI.gameObject);
+                            InventoryManager.Instance.HideToolTip();
+                        }
                     }
-                    else if (currentItemUI.Item.ID == 2)
-                    {
-                        GameMainUI.Instance.MP += ((Consumable)(currentItemUI.Item)).MP; 
-                    }
+                   
                 }
             } 
         }
