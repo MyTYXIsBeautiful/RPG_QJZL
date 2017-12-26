@@ -16,7 +16,17 @@ public class ConstData
     public const string T_finalBossMonster = "T_finalBossMonster";
     //--角色表
     public const string T_hero = "T_hero";
+    //--用户表
+    public const string T_user = "T_user";
 
+}
+
+public class ConstUserData
+{
+    //---用户名
+    //--用户属性
+    public const string user_name = "user_name";
+    public const string user_password = "user_password";
 }
 
 public class ConstMonsterData

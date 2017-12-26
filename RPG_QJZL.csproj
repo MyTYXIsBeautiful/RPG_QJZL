@@ -255,12 +255,10 @@
     <Compile Include="Assets\Resources\Scripts\Camera\CameraFollow.cs" />
     <Compile Include="Assets\Resources\Scripts\Camera\CameraShake.cs" />
     <Compile Include="Assets\Resources\Scripts\Const\ConstData.cs" />
-    <Compile Include="Assets\Resources\Scripts\Hero\HeroAction.cs" />
     <Compile Include="Assets\Resources\Scripts\Hero\HeroAnimation.cs" />
     <Compile Include="Assets\Resources\Scripts\Hero\HeroManager.cs" />
     <Compile Include="Assets\Resources\Scripts\Hero\HeroModel.cs" />
     <Compile Include="Assets\Resources\Scripts\Hero\HeroMove.cs" />
-    <Compile Include="Assets\Resources\Scripts\Hero\HeroStatus.cs" />
     <Compile Include="Assets\Resources\Scripts\Loading\LoadSceneController.cs" />
     <Compile Include="Assets\Resources\Scripts\Login\LoginUIScript.cs" />
     <Compile Include="Assets\Resources\Scripts\MainGame\GameMainUI.cs" />
@@ -303,7 +301,6 @@
     <None Include="Assets\Plugins\Demigiant\DOTweenPro\readme.txt" />
     <None Include="Assets\Plugins\Demigiant\DemiLib\DemiLib.xml" />
     <None Include="Assets\Plugins\Demigiant\DemiLib\Editor\DemiEditor.XML" />
-    <None Include="Assets\Plugins\Demigiant\readme_DOTweenPro.txt" />
     <None Include="Assets\Resources\第一套\战斗界面补充修改\闪避2是怪物的,另一个是自己的.txt" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

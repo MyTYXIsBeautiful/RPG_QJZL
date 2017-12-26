@@ -7,6 +7,8 @@ public class HeroModel
     //----属性
     string name;//英雄名称
     public string Name { get { return name; } set { name = value; } }
+    string user_name;//用户名
+    public string User_name { get { return user_name; } set { user_name = value; } }
     int money;//金币
     public int Money { get { return money; } set { money = value; } }
     int level;//等级

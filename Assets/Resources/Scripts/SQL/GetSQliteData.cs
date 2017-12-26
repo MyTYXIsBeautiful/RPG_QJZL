@@ -75,7 +75,7 @@ public class GetSQliteData
     }
 
     /// <summary>
-    /// 读取数据
+    /// 读取某一行的数据
     /// </summary>
     /// <param name="tableName">表名</param>
     /// <param name="condition">条件</param>
@@ -87,6 +87,19 @@ public class GetSQliteData
 
         return CreateCommand(sqlQuery);
     }
+
+    /// <summary>
+    /// 读取某一列的数据
+    /// </summary>
+    /// <param name="data">数据</param>
+    /// <param name="tableName">表名</param>
+    /// <returns></returns>
+    public SqliteDataReader GetRowDataReader(string data, string tableName)
+    {
+        string sqlQuery = "SELECT " + data + " FROM " + tableName;
+        return CreateCommand(sqlQuery);
+    }
+
 
     /// <summary>
     /// 更新某一行数据
@@ -105,6 +118,22 @@ public class GetSQliteData
             sqlQuery += ", " + datas[i] + " = " + "'" + dataValues[i] + "'";
         }
         sqlQuery += " WHERE " + condition + " = " + "'" + value + "'";
+        CreateCommand(sqlQuery);
+    }
+
+    /// <summary>
+    /// 插入数据
+    /// </summary>
+    /// <param name="tableName">表名</param>
+    /// <param name="dataValues">值数组</param>
+    public void InsertDataReader(string tableName, string[] dataValues)
+    {
+        string sqlQuery = "INSERT INTO " + tableName + " VALUES (" + "'" + dataValues[0] + "'";
+        for (int i = 1; i < dataValues.Length; i++)
+        {
+            sqlQuery += " , " + " ' " + dataValues[i] + " ' ";
+        }
+        sqlQuery += ")";
         CreateCommand(sqlQuery);
     }
 }

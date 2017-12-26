@@ -200,7 +200,7 @@ public class SetSQliteData
     }
 
     /// <summary>
-    /// 更新角色数据
+    /// 更新角色表T_hero数据
     /// </summary>
     /// <param name="datas">字段数组</param>
     /// <param name="hero">角色模型（构建数组）</param>
@@ -216,5 +216,54 @@ public class SetSQliteData
             hero.Max_Hp.ToString(), hero.Max_Mp.ToString(), hero.Attack.ToString(),hero.MagicDamage.ToString(),
             hero.Armor.ToString(), hero.MagicInvocation.ToString(), hero.PhysicalVampire.ToString(),hero.MagicVampire.ToString()};
         getSQliteData.UpdateDataReader(ConstData.T_hero, datas, dataValues, condition, value);
+    }
+
+    /// <summary>
+    /// 向用户表T_user插入数据
+    /// </summary>
+    /// <param name="dataValues">值数组</param>
+    public void InsertData(string user_name, string user_password)
+    {
+        getSQliteData.OpenDB("Data Source=" + Path.Combine(Application.persistentDataPath, ConstData.dataBase));//根据路径打开数据库
+        getSQliteData.InsertDataReader(ConstData.T_user, new string[] { user_name, user_password});
+    }
+
+    /// <summary>
+    /// 检查用户表所有的账户名
+    /// </summary>
+    /// <param name="user_name">用户名</param>
+    /// <returns></returns>
+    public bool CheckUserNameData(string user_name)
+    {
+        getSQliteData.OpenDB("Data Source=" + Path.Combine(Application.persistentDataPath, ConstData.dataBase));//根据路径打开数据库
+        SqliteDataReader reader = getSQliteData.GetRowDataReader(ConstUserData.user_name, ConstData.T_user);
+        while (reader.Read())
+        {
+            if(reader.GetString(reader.GetOrdinal(ConstUserData.user_name)) == user_name)
+            {
+                return false;
+            }
+        }
+        return true;
+    }
+
+    /// <summary>
+    /// 检查用户表的密码
+    /// </summary>
+    /// <param name="user_name"></param>
+    /// <param name="user_password"></param>
+    /// <returns></returns>
+    public bool CheckPasswordData(string user_name, string user_password)
+    {
+        getSQliteData.OpenDB("Data Source=" + Path.Combine(Application.persistentDataPath, ConstData.dataBase));//根据路径打开数据库
+        SqliteDataReader reader =  getSQliteData.GetDataReader(ConstData.T_user, ConstUserData.user_name, user_name);
+        while (reader.Read())
+        {
+            if(reader.GetString(reader.GetOrdinal(ConstUserData.user_password)) == user_password)
+            {
+                return true;
+            }
+        }
+        return false;
     }
 }

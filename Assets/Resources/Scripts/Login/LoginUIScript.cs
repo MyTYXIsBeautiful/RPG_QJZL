@@ -39,10 +39,14 @@ public class LoginUIScript : MonoBehaviour
             if(Login_UserName.text==""|| Login_UserPassWord.text == "")
             {
                 Login_Fail.SetActive(true);
-            }else
+            }else if(! SetSQliteData.Instance().CheckUserNameData(Login_UserName.text) && SetSQliteData.Instance().CheckPasswordData(Login_UserName.text, Login_UserPassWord.text))
             {
                 //如果有 那么跳转页面       
                 SceneManager.LoadScene(ConstScript.PlayerSelect);
+            }
+            else
+            {
+                Login_Fail.SetActive(true);
             }
 
 
@@ -58,9 +62,14 @@ public class LoginUIScript : MonoBehaviour
             if(Register_UserName.text==""|| Register_UserPassWord.text=="" || Register_UserConfirmPass.text == "")
             {
                     RegPassWordFail.SetActive(true);
-            }else
+            }else if(SetSQliteData.Instance().CheckUserNameData(Register_UserName.text) && Register_UserPassWord.text == Register_UserConfirmPass.text)
             {
+                SetSQliteData.Instance().InsertData(Register_UserName.text, Register_UserPassWord.text);
                 SceneManager.LoadScene(ConstScript.PlayerSelect);
+            }
+            else
+            {
+                RegPassWordFail.SetActive(true);
             }
         });
     }
