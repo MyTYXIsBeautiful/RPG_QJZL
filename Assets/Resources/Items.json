@@ -8,7 +8,7 @@
         "capacity": 10,
         "buyPrice": 10,
         "sellPrice": 5,
-        "hp": 10,
+        "hp": 100,
         "mp": 0,
         "sprite": "Sprites/Items/hp"
     },
@@ -22,7 +22,7 @@
     "buyPrice": 10,
     "sellPrice": 5,
     "hp": 0,
-    "mp": 10,
+    "mp": 100,
     "sprite": "Sprites/Items/mp"
   },
   {

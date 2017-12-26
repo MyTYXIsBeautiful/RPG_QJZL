@@ -2,7 +2,9 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
-
+/// <summary>
+/// 装备特效转圈圈控制
+/// </summary>
 public class ZBTXScript : MonoBehaviour {
 
     Image image;
