@@ -2,7 +2,7 @@ fileFormatVersion: 2
 guid: 2a5eb11ede79d3344bb5597a8c75f6f6
 timeCreated: 18446744011573954816
 ModelImporter:
-  serializedVersion: 22
+  serializedVersion: 21
   fileIDToRecycleName:
     100000: Bip01
     100002: Bip01 Head
@@ -107,12 +107,10 @@ ModelImporter:
     7400000: skill_judufeiren_01
     7400002: skill_judufeiren_02
     9500000: //RootNode
-  externalObjects: {}
   materials:
     importMaterials: 1
     materialName: 0
     materialSearch: 1
-    materialLocation: 0
   animations:
     legacyGenerateAnimations: 4
     bakeSimulation: 0
@@ -125,7 +123,6 @@ ModelImporter:
     animationImportWarnings: 
     animationRetargetingWarnings: 
     animationDoRetargetingWarnings: 0
-    importAnimatedCustomProperties: 0
     animationCompression: 1
     animationRotationError: 0.5
     animationPositionError: 0.5
@@ -138,7 +135,7 @@ ModelImporter:
       name: skill_judufeiren_01
       takeName: Take 001
       firstFrame: 0
-      lastFrame: 37
+      lastFrame: 10
       wrapMode: 0
       orientationOffsetY: 0
       level: 0
